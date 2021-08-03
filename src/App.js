@@ -1,32 +1,40 @@
 import Boton from './components/Boton'
-import Boton2 from './components/Boton2'
+import { useState } from 'react'
 
 function App() {
 
+  const botones = {
+    boton1: "click 1", 
+    boton2: "click2",
+    tipo1:"success", 
+    tipo2:"warning"
+  }
+    let parrafo = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ratione aut aliquam consequatur ipsum reiciendis optio doloribus accusantium, quaerat vitae culpa asperiores sunt totam nisi."
+
+    const [texto, setTexto] = useState('Aca va el texto')
+
+    const cambiar_texto = () => {
+        setTexto( parrafo )
+    }
+
   return (  
-      <div class="jumbotron">
-        <h1 class="display-4">Helle world !!</h1>
-        <p class="lead">
-            This is a simple hero unit, a simple jumbotron-style component <br/>
-            for alling extra attention to featured content or information.
-        </p>
-        <hr class="my-4" />
-        <p>
-            It ussses unity classes for typhography and spacing to space content out <br/>
-            whithin the larger container
-        </p>
-        <a href="" class="btn btn-primary btn-lg"  role="button">Learn More</a> 
-        <br/>
-        <br/>
+      <div class="container">
+        <div className="row">
+          <div className="col-md-6">
+            <div className="card">
+                <div className="card-header">
+                  <h3>Aca va el titulo</h3>
+                </div>
+                <div className="card-body">
+                    <p> { texto } </p>
+                </div>
+                <div className="card-footer">
+                  <button className="btn btn-success btn-block" onClick={cambiar_texto}>Cambiar datos</button>
+                </div>
+            </div>
 
-        <Boton texto="Clickeame ahora !" /> 
-
-        <br/>
-        <br/>
-        <Boton2 texto="soy el boton 2 !" />
-
-     
-
+          </div>
+        </div> 
     </div>
   );
 }

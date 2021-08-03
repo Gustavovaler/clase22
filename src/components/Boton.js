@@ -3,12 +3,12 @@
 function Boton(props){
 
     let texto = props.texto
-    
+    let clases = `btn btn-${props.tipo}`
 
     return (
         <div>
             
-            <span className="btn btn-danger">{ texto }</span>
+            <span className={clases}>{ texto }</span>
 
         </div>
     )
