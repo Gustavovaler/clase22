@@ -1,8 +1,9 @@
-
+import Boton from './components/Boton'
+import Boton2 from './components/Boton2'
 
 function App() {
-  return (
-  
+
+  return (  
       <div class="jumbotron">
         <h1 class="display-4">Helle world !!</h1>
         <p class="lead">
@@ -14,7 +15,18 @@ function App() {
             It ussses unity classes for typhography and spacing to space content out <br/>
             whithin the larger container
         </p>
-        <a href="" class="btn btn-primary btn-lg"  role="button">Learn More</a>      
+        <a href="" class="btn btn-primary btn-lg"  role="button">Learn More</a> 
+        <br/>
+        <br/>
+
+        <Boton texto="Clickeame ahora !" /> 
+
+        <br/>
+        <br/>
+        <Boton2 texto="soy el boton 2 !" />
+
+     
+
     </div>
   );
 }
