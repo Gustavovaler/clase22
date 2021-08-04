@@ -1,6 +1,7 @@
 //import Boton from './components/Boton'
 import { useState } from 'react'
 import axios  from 'axios'
+import Formulario from './components/Formulario';
 
 function App() {
 
@@ -47,6 +48,9 @@ function App() {
 
           </div>
         </div> 
+      
+        {/* formulario */}
+        <Formulario/>
     </div>
   );
 }
