@@ -1,22 +1,22 @@
-import Boton from './components/Boton'
+//import Boton from './components/Boton'
 import { useState } from 'react'
 import axios  from 'axios'
 
 function App() {
 
-  const botones = {
-    boton1: "click 1", 
-    boton2: "click2",
-    tipo1:"success", 
-    tipo2:"warning"
-  }
-    let parrafo = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ratione aut aliquam consequatur ipsum reiciendis optio doloribus accusantium, quaerat vitae culpa asperiores sunt totam nisi."
+  // const botones = {
+  //   boton1: "click 1", 
+  //   boton2: "click2",
+  //   tipo1:"success", 
+  //   tipo2:"warning"
+  // }
+  //   let parrafo = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ratione aut aliquam consequatur ipsum reiciendis optio doloribus accusantium, quaerat vitae culpa asperiores sunt totam nisi."
 
-    const [texto, setTexto] = useState('Aca va el texto')
+  //   const [texto, setTexto] = useState('Aca va el texto')
 
-    const cambiar_texto = () => {
-        setTexto( parrafo )
-    }
+  //   const cambiar_texto = () => {
+  //       setTexto( parrafo )
+  //   }
     // ----------------------------------
 
 
@@ -30,7 +30,7 @@ function App() {
         .then(res => {
           setPersonaje(res.data.name)})
   return (  
-      <div class="container mt-5">
+      <div className ="container mt-5">
         <div className="row">
           <div className="col-md-6">
             <div className="card">
