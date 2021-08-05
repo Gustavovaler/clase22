@@ -1,27 +1,10 @@
-//import Boton from './components/Boton'
+
 import { useState } from 'react'
 import axios  from 'axios'
 import Formulario from './components/Formulario';
 
 function App() {
-
-  // const botones = {
-  //   boton1: "click 1", 
-  //   boton2: "click2",
-  //   tipo1:"success", 
-  //   tipo2:"warning"
-  // }
-  //   let parrafo = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ratione aut aliquam consequatur ipsum reiciendis optio doloribus accusantium, quaerat vitae culpa asperiores sunt totam nisi."
-
-  //   const [texto, setTexto] = useState('Aca va el texto')
-
-  //   const cambiar_texto = () => {
-  //       setTexto( parrafo )
-  //   }
-    // ----------------------------------
-
-
-
+  
     const [ personaje , setPersonaje ] = useState('')
 
     const [id_personaje, setId_personaje ] = useState(3); 
@@ -30,6 +13,7 @@ function App() {
     axios.get(`https://swapi.dev/api/people/${id_personaje}`)
         .then(res => {
           setPersonaje(res.data.name)})
+
   return (  
       <div className ="container mt-5">
         <div className="row">
